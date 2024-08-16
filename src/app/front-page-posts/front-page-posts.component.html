@@ -1,0 +1,11 @@
+<h2>Posts</h2>
+<ul class="posts">
+  <li *ngFor="let post of posts" [class.selected]="post === selectedPost">
+    <span class="id">{{ post.id }}</span>
+    <span class="name">{{ post.title }}</span>
+    <button type="button" (click)="onSelect(post)">view post</button>
+  </li>
+</ul>
+<app-post-page [post]="selectedPost"></app-post-page>
+
+
